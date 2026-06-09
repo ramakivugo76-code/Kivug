@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>🎓 Student Registration System</h1>
+                <p>Njia Rahisi ya Kusajili Wanafunzi</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Registration Form Section -->
+            <section class="form-section">
+                <div class="form-wrapper">
+                    <h2>Fomu ya Kusajili</h2>
+                    <form id="registrationForm" class="registration-form">
+                        <!-- Full Name -->
+                        <div class="form-group">
+                            <label for="fullName">Jina Kamili</label>
+                            <input type="text" id="fullName" name="fullName" placeholder="Andika jina lako" required>
+                            <span class="error-message" id="fullNameError"></span>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+
+                        <!-- Phone Number -->
+                        <div class="form-group">
+                            <label for="phone">Nambari ya Simu</label>
+                            <input type="tel" id="phone" name="phone" placeholder="0700000000" required>
+                            <span class="error-message" id="phoneError"></span>
+                        </div>
+
+                        <!-- Date of Birth -->
+                        <div class="form-group">
+                            <label for="dob">Tarehe ya Kuzaliwa</label>
+                            <input type="date" id="dob" name="dob" required>
+                            <span class="error-message" id="dobError"></span>
+                        </div>
+
+                        <!-- Course Selection -->
+                        <div class="form-group">
+                            <label for="course">Chagua Kozi</label>
+                            <select id="course" name="course" required>
+                                <option value="">-- Chagua Kozi --</option>
+                                <option value="web-development">Web Development</option>
+                                <option value="mobile-app">Mobile App Development</option>
+                                <option value="data-science">Data Science</option>
+                                <option value="cybersecurity">Cybersecurity</option>
+                                <option value="ui-ux">UI/UX Design</option>
+                            </select>
+                            <span class="error-message" id="courseError"></span>
+                        </div>
+
+                        <!-- Gender -->
+                        <div class="form-group">
+                            <label>Jinsia</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="gender" value="Male" required>
+                                    Kiume
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="gender" value="Female" required>
+                                    Kike
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="gender" value="Other" required>
+                                    Nyingine
+                                </label>
+                            </div>
+                            <span class="error-message" id="genderError"></span>
+                        </div>
+
+                        <!-- Address -->
+                        <div class="form-group">
+                            <label for="address">Anwani</label>
+                            <textarea id="address" name="address" placeholder="Andika anwani yako" rows="3" required></textarea>
+                            <span class="error-message" id="addressError"></span>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="submit-btn">Sajili Sasa</button>
+                        <button type="reset" class="reset-btn">Futa Fomu</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Students List Section -->
+            <section class="students-section">
+                <div class="students-wrapper">
+                    <h2>Wanafunzi Waliosajiliwa</h2>
+                    <div id="studentsList" class="students-list">
+                        <p class="empty-message">Hakuna wanafunzi waliosajiliwa bado</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 Student Registration System. Haki zote zimehifadhiwa.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
